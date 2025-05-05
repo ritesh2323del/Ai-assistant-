@@ -1,42 +1,50 @@
-
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>वर्कबुक</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Advocates Workbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>वर्कबुक</h1>
-    <nav>
-      <a href="index.html">मुख पृष्ठ</a>
-      <a href="laws.html">कानून</a>
-      <a href="ai.html">AI सहायक</a>
-    </nav>
+  <header class="app-header">
+    <div class="menu-icon">☰</div>
+    <h1>Advocates Workbook</h1>
+    <button class="add-case-btn">+</button>
   </header>
 
   <main>
-    <h2>नया मामला जोड़ें</h2>
-    <form id="caseForm">
-      <input type="text" placeholder="मामले का नाम" required><br>
-      <input type="text" placeholder="मामला संख्या"><br>
-      <input type="text" placeholder="अदालत"><br>
-      <input type="text" placeholder="ग्राहक का नाम"><br>
-      <input type="text" placeholder="स्थिति"><br>
-      <input type="date" placeholder="तारीख"><br>
-      <input type="date" placeholder="अगली सुनवाई"><br>
-      <textarea placeholder="विवरण"></textarea><br>
-      <input type="file" id="documentInput"><br>
-      <button type="submit">जोड़ें</button>
-    </form>
+    <div class="tabs">
+      <button class="tab active">Active Cases</button>
+      <button class="tab">Closed Cases</button>
+      <button class="tab">All Cases</button>
+    </div>
 
-    <h2>सभी मामले</h2>
-    <div id="caseList"></div>
-    <button onclick="exportToPDF()">PDF में डाउनलोड करें</button>
+    <div class="case-list">
+      <!-- Sample Case Card -->
+      <div class="case-card">
+        <div class="case-details">
+          <h3>G</h3>
+          <p>Case No: H</p>
+          <p>Client: H</p>
+          <p>Court: G</p>
+          <p><i class="fa fa-calendar"></i> Upcoming: Apr 21, 2025 at 21:53</p>
+        </div>
+        <div class="status">Active</div>
+      </div>
+    </div>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <footer>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">History</a>
+      <a href="#">Updates</a>
+      <a href="#">Gemini</a>
+      <a href="#" class="active">Workbook</a>
+    </nav>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
