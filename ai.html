@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI सहायक</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AI सहायक</h1>
+    <nav>
+      <a href="index.html">मुख पृष्ठ</a>
+      <a href="workbook.html">वर्कबुक</a>
+      <a href="laws.html">कानून</a>
+    </nav>
+  </header>
 
+  <main>
+    <h2>अपना प्रश्न पूछें</h2>
+    <input type="text" id="aiInput" placeholder="जैसे: IPC 302 क्या है?">
+    <button onclick="askGemini()">पूछें</button>
+    <div id="aiOutput"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
