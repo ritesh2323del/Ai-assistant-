@@ -1,24 +1,40 @@
-
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>वकील का कानूनी टूलकिट</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Advocate Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>वकील का कानूनी टूलकिट</h1>
-    <nav>
-      <a href="workbook.html">वर्कबुक</a>
-      <a href="laws.html">कानून</a>
-      <a href="ai.html">AI सहायक</a>
-    </nav>
+  <header class="app-header">
+    <div class="menu-icon">☰</div>
+    <h1>Nyay Setu</h1>
+    <button class="language-btn">हिंदी</button>
+    <div class="user-icon">👤</div>
   </header>
 
   <main>
-    <h2>स्वागत है!</h2>
-    <p>यहाँ आप मामले जोड़ सकते हैं, कानून देख सकते हैं और AI सहायक से सलाह ले सकते हैं।</p>
+    <section class="law-reference">
+      <h2>Indian Law Reference</h2>
+      <input type="text" placeholder="Search by section, act or keywords...">
+      <div class="recent-searches">
+        <span>Constitution</span>
+        <span>Corporate Law</span>
+        <span>Civil Law</span>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">History</a>
+      <a href="#">Updates</a>
+      <a href="#">Gemini</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
