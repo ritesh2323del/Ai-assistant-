@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>वर्कबुक</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>वर्कबुक</h1>
+    <nav>
+      <a href="index.html">मुख पृष्ठ</a>
+      <a href="laws.html">कानून</a>
+      <a href="ai.html">AI सहायक</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>नया मामला जोड़ें</h2>
+    <form id="caseForm">
+      <input type="text" placeholder="मामले का नाम" required><br>
+      <input type="text" placeholder="मामला संख्या"><br>
+      <input type="text" placeholder="अदालत"><br>
+      <input type="text" placeholder="ग्राहक का नाम"><br>
+      <input type="text" placeholder="स्थिति"><br>
+      <input type="date" placeholder="तारीख"><br>
+      <input type="date" placeholder="अगली सुनवाई"><br>
+      <textarea placeholder="विवरण"></textarea><br>
+      <input type="file" id="documentInput"><br>
+      <button type="submit">जोड़ें</button>
+    </form>
+
+    <h2>सभी मामले</h2>
+    <div id="caseList"></div>
+    <button onclick="exportToPDF()">PDF में डाउनलोड करें</button>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
