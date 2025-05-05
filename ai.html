@@ -1,26 +1,42 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI सहायक</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>AI Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>AI सहायक</h1>
-    <nav>
-      <a href="index.html">मुख पृष्ठ</a>
-      <a href="workbook.html">वर्कबुक</a>
-      <a href="laws.html">कानून</a>
-    </nav>
+  <header class="app-header">
+    <div class="menu-icon">☰</div>
+    <h1>Advocate Assistant</h1>
+    <button class="language-btn">हिंदी</button>
+    <div class="user-icon">👤</div>
   </header>
 
-  <main>
-    <h2>अपना प्रश्न पूछें</h2>
-    <input type="text" id="aiInput" placeholder="जैसे: IPC 302 क्या है?">
-    <button onclick="askGemini()">पूछें</button>
-    <div id="aiOutput"></div>
+  <main class="chat-container">
+    <div class="chat-history">
+      <div class="message user">
+        <strong>You:</strong> Murder
+      </div>
+      <div class="message system">
+        <strong>System:</strong> Sorry, there was an error communicating with the AI.
+      </div>
+    </div>
+
+    <form id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your message...">
+      <button type="submit"><i class="fa fa-paper-plane"></i></button>
+    </form>
   </main>
+
+  <footer>
+    <nav>
+      <a href="#">Cases</a>
+      <a href="#" class="active">Workbook</a>
+      <a href="#">AI Assistant</a>
+    </nav>
+  </footer>
 
   <script src="script.js"></script>
 </body>
